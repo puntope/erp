@@ -7,8 +7,11 @@
 
 ## SET ADMIN USER
 `$ php artisan tinker`
+
 `> $rol = new App\Roles();`
+
 `> $rol->nombre = 'admin'`
+
 `> $rol->save();`
 `> $user = new App\User();`
 `> $user->name = 'admin';`
