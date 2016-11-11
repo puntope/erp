@@ -1,0 +1,513 @@
+/*-------------------------------------------------------------------
+[Table of contents]
+
+1. General Structure
+2. Anchor Link
+3. Login Form
+
+-------------------------------------------------------------------*/
+
+/*=== 1. General Structure ===*/
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#main_content {
+    padding-top: 56px;
+}
+
+.login-wrapper {
+    background: #1D1D1D;
+}
+
+section header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+
+section header h1 {
+    margin: 0;
+}
+
+/*=== 2. Anchor Link ===*/
+a {
+
+}
+a:hover {
+
+}
+
+
+/*=== 3. Login Forms ===*/
+
+.login-form-wrapper {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%;
+}
+
+#login-form, #password-form, #reset-form {
+    width: 250px;
+    margin:0 auto;
+}
+
+#sending-button-wrapper {
+    border-radius: 50px;
+    height: 50px;
+    left: 215px;
+    position: relative;
+    top: -125px;
+    width: 50px;
+    background: #1d1d1d;
+}
+
+
+#sending-button-wrapper button[type="submit"] {
+    background: #f9b916 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50px;
+    color: #1d1d1d;
+    height: 36px;
+    left: 7px;
+    position: relative;
+    top: 7px;
+    width: 36px;
+}
+
+#sending-button-wrapper  {
+    transition: 0.3s all;
+}
+
+#sending-button-wrapper:hover {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+#remember ~ label {
+    color: #fff;
+    font-size: 12px;
+    font-weight: lighter;
+    left: 5px;
+    position: relative;
+    top: -2px;
+}
+
+
+.login-logo {
+    margin: 20px;
+}
+
+.etc-login-form a {
+    color: #fff;
+    transition: 1s all;
+}
+
+.etc-login-form a:hover {
+    color: #f9b916;
+    text-decoration: none;
+}
+
+.etc-login-form {
+    padding-top: 20px;
+    position: relative;
+    top: -50px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.login-form-main-message {
+    color: red;
+    padding: 15px;
+    text-align: center;
+}
+
+.status {
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+
+#password-form .large-button button, .form-reset .large-button button {
+    padding: 5px 10px;
+}
+
+#password-form p {
+   color: #fff;
+    font-size: 12px;
+    margin: 20px;
+}
+
+.form-reset label {
+    display: block;
+    margin: 10px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.form-reset div {
+    margin-bottom: 20px;
+}
+
+/*=== 4. Menu ===*/
+
+.navbar span.glyphicon-send.glyphicon {
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+}
+
+.navbar span.glyphicon-send.glyphicon:hover {
+    color: #F9B916;
+}
+
+    .navbar {
+        border-radius: 0;
+    }
+
+
+/*=== 5. General Form Classes ===*/
+
+.chosen-container {
+    width: 100% !important;
+}
+
+.chosen-container-single .chosen-single {
+    background: #fff;
+    box-shadow: none;
+    overflow: visible;
+    padding: .5em 1em;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.chosen-container-single .chosen-single div b {
+    background: url(chosen-sprite.png) no-repeat 0 5px;
+}
+
+form label span.required {
+    color: #F9B916;
+    font-weight: bold;
+}
+
+.client-info {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+
+.tarea h2 {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.tarea .time {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #F9B916;
+}
+
+.tarea .edit, .tarea.editing .time {
+    display: none;
+}
+
+.tarea.editing .edit, .tarea .time {
+    display: inline-block;
+    width: 110px;
+    margin: 0 0 0 1em;
+    vertical-align: bottom;
+}
+
+.tipo-info {
+    color: #777;
+    font-size: 11px;
+}
+
+.controls .mbtn:nth-child(2) {
+    bottom: 80px;
+}
+
+
+.mbtn {
+    display: block !important;
+    position: fixed !important;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #FFF;
+    border-radius: 100%;
+    width: 47px;
+    font-size: 16px;
+    height: 47px;
+    vertical-align: middle;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
+    transition: background .3s;
+}
+
+.mbtn.yellow {
+    background: #F9B916;
+}
+
+.mbtn.green {
+    background: #499049;
+}
+
+.mbtn.red {
+    background: #a00000;
+}
+.mbtn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.mbtn .delete {
+    border: none;
+    background: transparent;
+}
+
+.mbtn .delete span {
+    position: relative;
+    left: -7px;
+    top: -1px;
+}
+
+
+
+.mbtn span {
+    vertical-align: middle;
+    padding: 1em;
+}
+
+.alerts {
+    display: inline-block;
+    margin: 2em;
+}
+
+.more-options {
+    position: absolute;
+    right: -15px;
+    top: 0;
+}
+
+.more-options .nav > li > a:hover, .nav > li > a:focus, .more-options .nav .open > a, .more-options .nav .open > a:hover, .more-options .nav .open > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.more-options .dropdown a span {
+    background: #eee;
+    width: 5px;
+    height: 5px;
+    display: block;
+    border-radius: 100%;
+    margin-bottom: 2px;
+}
+
+.more-options .dropdown-menu > li > a:hover, .more-options .dropdown-menu > li > a:focus {
+    color: #333;
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.more-options .dropdown-menu {
+    padding: 0;
+}
+
+.cliente .icon {
+    color: #bbb;
+    margin-left: 15px;
+}
+
+div#clientes .cliente {
+    padding: 1.2em;
+}
+div#clientes .cliente h4 {
+    display: inline;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.tarea-basics p {
+    max-width: 70%;
+}
+
+.cliente .client-time {
+    font-size: 16px;
+}
+
+.cliente .average {
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+.info-head {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.info-head img {
+    float: right;
+}
+
+.img-circle {
+    max-width: 40px;
+}
+
+#sidebar section > div {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#sidebar h4 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+.estados {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    float: right;
+    margin-right: 100px;
+}
+
+.estado {
+    margin-right: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.estados::after {
+    content: "";
+    position: absolute;
+    width: 335px;
+    height: 3px;
+    background: #efefef;
+    top: 22px;
+    z-index: 1;
+    left: 25px;
+}
+
+.estado.active {
+    top: -2px;
+}
+
+li.list-group-item.comercial {
+    padding: 20px;
+    min-height: 125px;
+}
+.estado a:hover {
+    text-decoration: none;
+}
+
+.estado a:hover i {
+    background: #ddd !important;
+}
+.active .sphere {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 12px;
+}
+
+.active span {
+    font-weight: bold;
+}
+
+i.sphere {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 100%;
+    margin: 15px auto;
+}
+
+.estado span {
+    color: #7a7a7a;
+    font-size: 12px;
+}
+
+.comercial img {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.comercial .info {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    max-width: 500px;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+}
+
+
+/* LAPTOP */
+
+@media (min-width: 1024px) {
+    .info-head {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
+        float: right;
+    }
+
+    .info-head img {
+        float: none;
+    }
+
+    .title-head {
+        float: left;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1280px) {
+
+}
