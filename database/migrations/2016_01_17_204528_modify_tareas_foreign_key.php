@@ -18,6 +18,9 @@ class ModifyTareasForeignKey extends Migration
 
             $table->foreign('tipo_proyecto_id')
                 ->references('id')->on('tipos_proyectos');
+
+            $table->foreign('user_id')
+                ->references('id')->on('users');
         });
     }
 
@@ -28,9 +31,6 @@ class ModifyTareasForeignKey extends Migration
      */
     public function down()
     {
-        Schema::table('tareas', function (Blueprint $table) {
-            $table->dropForeign('tareas_cliente_id_foreign');
-            $table->dropForeign('tareas_tipo_proyecto_id_foreign');
-        });
+        Schema::drop('tareas');
     }
 }

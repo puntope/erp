@@ -12,7 +12,14 @@ class AddFinalizadoToTiposProyectos extends Migration
      */
     public function up()
     {
-        Schema::table('desarrollos', function (Blueprint $table) {
+        Schema::create('desarrollos', function (Blueprint $table) {
+            $table->increments('id')->unsigned();
+            $table->string('nombre');
+            $table->text('descripcion');
+            $table->integer('horas');
+            $table->integer('cliente_id')->unsigned();
+            $table->integer('tipo_proyecto_id')->unsigned();
+            $table->date('entrega')->nullable();
             $table->boolean('finalizado')->default(0);
         });
     }
@@ -24,8 +31,6 @@ class AddFinalizadoToTiposProyectos extends Migration
      */
     public function down()
     {
-        Schema::table('desarrollos', function (Blueprint $table) {
-            $table->dropColumn('finalizado');
-        });
+        Schema::drop('desarrollos');
     }
 }

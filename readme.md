@@ -1,3 +1,33 @@
+## SET ENVIROMENT
+
+1. `$ composer install`
+2. `$ npm install`
+3. Renombrar fichero .env.example a .env y crear bbdd
+4. `$ php artisan migrate`
+
+## SET ADMIN USER
+`$ php artisan tinker`
+`> $rol = new App\Roles();`
+`> $rol->nombre = 'admin'`
+`> $rol->save();`
+`> $user = new App\User();`
+`> $user->name = 'admin';`
+`> $user->email = 'example@example.com';`
+`> $user->password = 'bcrypt('admin');`
+`> $user->alias = 'admin';`
+`> $user->rol_id = 1;`
+`> $user->save();`
+`> exit;`
+
+## LUNCH
+`$ php artisan serve`
+
+##ASSETS
+ Debe almacenarse en resources mediante js y sass y luego compilarse con gulp - elixir (ver gulpfile.js)
+
+ De momento la mayoría de las cosas estan en public directamente
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
