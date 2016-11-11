@@ -30,6 +30,8 @@
 
 `> exit;`
 
+`$ php artisan key:generate`
+
 ## LUNCH
 `$ php artisan serve`
 
