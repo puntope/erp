@@ -13,13 +13,21 @@
 `> $rol->nombre = 'admin'`
 
 `> $rol->save();`
+
 `> $user = new App\User();`
+
 `> $user->name = 'admin';`
+
 `> $user->email = 'example@example.com';`
+
 `> $user->password = 'bcrypt('admin');`
+
 `> $user->alias = 'admin';`
+
 `> $user->rol_id = 1;`
+
 `> $user->save();`
+
 `> exit;`
 
 ## LUNCH
