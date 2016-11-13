@@ -8,7 +8,7 @@ class Clientes extends Model
 {
     protected $table = 'clientes';
 
-    protected  $fillable = ['nombre','color','logo','tiempo_mes','visible','tipo_cliente_id'];
+    protected  $fillable = ['nombre','color','logo','tiempo_mes','visible','tipo_cliente_id','active'];
     protected $dateFormat = 'Y-m-d H:i:s';
 
     public function tareas()
@@ -22,8 +22,12 @@ class Clientes extends Model
     }
 
 
+    public function scopeVisibles($query) {
+        return $query->where('visible',1);
+    }
+
     public function scopeActivos($query) {
-        return $query->where('tipo_cliente_id','>',0);
+        return $query->where('active',1);
     }
 
     public function scopeTipoCliente($query,$tipo) {

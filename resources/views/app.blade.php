@@ -8,7 +8,7 @@
     <title>Erp rIL - @yield('title')</title>
     <link rel="shortcut icon" href="/favicon.ico" />
 
-{!! Html::style('assets/css/bootstrap.css') !!}
+    {!! Html::style('assets/css/vendor.css') !!}
     {!! Html::style('assets/css/styles.css') !!}
     @yield('extra-styles')
             <!-- Fonts -->
@@ -49,5 +49,6 @@
         <!-- Scripts -->
 {!! Html::script('assets/js/vendor.js') !!}
 @yield('extra-scripts')
+{!! Toastr::render() !!}
 </body>
 </html>

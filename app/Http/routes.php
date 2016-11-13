@@ -23,8 +23,12 @@
     });
 
     Route::group(['middleware'=>['auth','authorized:3']], function() {
+        Route::resource('clientes/todos', 'ClientesController@todos');
+        Route::resource('clientes/tipos', 'TiposClientesController');
+
         Route::get('clientes/{id}/{mes}/{ano}/', 'ClientesController@historico');
         Route::get('desarrollos/finalizados','DesarrollosController@finalizados');
+        Route::resource('clientes/tipos', 'TiposClientesController');
         Route::resource('desarrollos', 'DesarrollosController');
         Route::resource('clientes', 'ClientesController');
         Route::resource('user', 'UserController',['only' => ['show']]);

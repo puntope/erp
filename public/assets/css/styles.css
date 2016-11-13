@@ -450,6 +450,11 @@ li.list-group-item.comercial {
     margin-bottom: 12px;
 }
 
+a.icon {
+    line-height: 3;
+    margin-left: 10px;
+}
+
 .active span {
     font-weight: bold;
 }

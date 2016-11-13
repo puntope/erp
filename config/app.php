@@ -152,6 +152,7 @@ return [
          */
 
         'Maatwebsite\Excel\ExcelServiceProvider',
+        'nilsenj\Toastr\ToastrServiceProvider',
 
 
     ],
@@ -205,6 +206,8 @@ return [
         'Html' => 'Collective\Html\HtmlFacade',
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
         'Date' => Jenssegers\Date\Date::class,
+        'Toastr' => 'nilsenj\Toastr\Facades\Toastr',
+
 
 
 

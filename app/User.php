@@ -47,11 +47,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     public function hasRole($role) {
-        if ($this->rol_id <= $role) {
-            return true;
-        } else {
-            return false;
-        }
+        return $this->rol_id <= $role;
     }
 
     public function isCreator($tarea) {

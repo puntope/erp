@@ -16,8 +16,16 @@ elixir(function(mix) {
 
     mix.scripts([
         'vendor/jquery-1.12.0.min.js',
+        'vendor/toastr.min.js',
         'vendor/bootstrap.min.js',
         'vendor/vue.min.js',
         'vendor/vue-resource.min.js'
-    ],'public/assets/js/vendor.js')
+    ],'public/assets/js/vendor.js');
+
+    mix.styles([
+        'vendor/bootstrap.min.css',
+        'vendor/chosen.min.css',
+        'vendor/default.css',
+        'vendor/toastr.min.css'
+    ],'public/assets/css/vendor.css')
 });

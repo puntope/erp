@@ -45,7 +45,14 @@
                     </ul>
                 </li>
 
-                <li><a href="/clientes">Clientes</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/clientes">Clientes</a></li>
+                        <li><a href="/clientes/todos">Todos los clientes</a></li>
+                        <li><a href="/clientes/tipos">Tipos de clientes</a></li>
+                    </ul>
+                </li>
 
                 @if (Auth::user()->hasRole(2))
                     <li><a href="/comerciales">Acciones comerciales</a></li>

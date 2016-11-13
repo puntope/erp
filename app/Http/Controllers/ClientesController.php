@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
+use nilsenj\Toastr\Facades\Toastr;
 
 class ClientesController extends Controller
 {
@@ -46,7 +47,12 @@ class ClientesController extends Controller
     public function index()
     {
 
-        return view('clientes.index')->with(['tiposClientes'=>TiposClientes::all(),'clientes'=>Clientes::tipoCliente(1)->orderBy('tiempo_mes','DESC')->get(),'otros'=>Clientes::tipoCliente(3)->get()]);
+        return view('clientes.index')->with(['tiposClientes'=>TiposClientes::all(),'clientes'=>Clientes::activos()->visibles()->tipoCliente(2)->orderBy('tiempo_mes','DESC')->get(),'otros'=>Clientes::activos()->visibles()->tipoCliente(3)->get()]);
+    }
+
+    public function todos()
+    {
+        return view('clientes.index')->with(['tiposClientes'=>TiposClientes::all(),'clientes'=>Clientes::all(), 'otros' => []]);
     }
 
     public function getTiposClientes() {
@@ -96,7 +102,7 @@ class ClientesController extends Controller
             $cliente = Clientes::all()->last();
             $cliente->logo = $partialPath;
             $cliente->save();
-            Session::put('message', 'Cliente creado correctamente');
+            Toastr::success('Cliente creado correctamente', $title = 'Ok!', $options = []);
             return redirect('/clientes');
         };
 
@@ -175,7 +181,7 @@ class ClientesController extends Controller
             $cliente->save();
 
 
-            Session::put('message', 'Cliente editado correctamente');
+            Toastr::success('Cliente editado correctamente', $title = 'Ok!', $options = []);
             return redirect('/clientes');
         };
 
@@ -192,7 +198,7 @@ class ClientesController extends Controller
     {
         $cliente = Clientes::findOrFail($id);
         $cliente->delete();
-        Session::put('message', 'Cliente borrado correctamente');
+        Toastr::success('Cliente eliminado correctamente', $title = 'Ok!', $options = []);
         return view('clientes.index')->with(['tiposClientes'=>TiposClientes::all(),'clientes'=>Clientes::tipoCliente(1)->orderBy('tiempo_mes','DESC')->get(),'otros'=>Clientes::tipoCliente(3)->get()]);
     }
 }

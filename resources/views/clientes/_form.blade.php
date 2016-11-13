@@ -13,6 +13,19 @@
     {!! Form::select('tipo_cliente_id',array_pluck($tiposClientes,'nombre','id'), null,['class'=>'form-control']) !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('visible','¿Cliente visible?') !!}
+    Sí {!! Form::radio('visible', 1) !!}
+    No {!! Form::radio('visible', 0) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('active','¿Activo?') !!}
+    Sí {!! Form::radio('active', 1) !!}
+    No {!! Form::radio('active', 0) !!}
+</div>
+
+
 
 <div class="form-group">
     {!! Form::label('Logo') !!}
